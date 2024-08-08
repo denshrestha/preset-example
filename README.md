@@ -48,7 +48,7 @@ Configure collors in ./tailwind/tailwind.colors.cjs
 
 ### Icons
 
-In order to user icons just add [icon-name].svg file in ./src/accets/icons folder
-Autoimport is added to vite.config.icons.ts
+In order to user icons just add [icon-name].svg file in ./src/accets/icons folder.
+Autoimport is added to vite.config.icons.ts.
 And use if like "import IconDashboard from '~icons/icon/dashboard'"
 
