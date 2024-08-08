@@ -1,0 +1,85 @@
+@use "element-plus/theme-chalk/src/collapse";
+
+.el-collapse {
+  @apply border-none;
+
+  .el-collapse-item {
+    &__header {
+      @apply h-auto;
+    }
+
+    &__content {
+      @apply p-0;
+    }
+
+    &__arrow {
+      @apply w-2 h-1 mr-5;
+
+      svg {
+        @apply hidden;
+      }
+
+      &:before {
+        content: '';
+        mask: url('@/assets/icons/arrow-small.svg') no-repeat;
+        mask-size: contain;
+        @apply bg-grey w-full h-full duration-300;
+      }
+
+      &.is-active:before {
+        @apply -rotate-[270deg] #{!important};
+      }
+    }
+
+    > div:first-child {
+      @apply border-b border-transparent transition-colors duration-300;
+    }
+
+    &.is-active {
+      >div:first-child {
+        @apply border-grey-light;
+      }
+    }
+  }
+
+  &.hide-arrow {
+    .el-collapse-item__arrow {
+      @apply hidden;
+    }
+  }
+}
+
+.custom-collapse {
+  .el-collapse-item {
+    &__header {
+      @apply bg-grey-extra-light;
+    }
+
+    &__wrap {
+      @apply bg-grey-extra-light;
+    }
+
+    >div:first-child {
+      @apply border-none;
+    }
+  }
+}
+
+
+.progress-collapse {
+  .el-collapse {
+   @apply border-b border-primary;
+  }
+  .el-collapse-item {
+    &__header {
+      @apply text-subheading mb-4;
+    }
+    &__wrap {
+      @apply pt-4 pb-6;
+    }
+
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+}

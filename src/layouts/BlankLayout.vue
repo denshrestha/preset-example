@@ -1,0 +1,3 @@
+<template>
+  <RouterViewAnimated />
+</template>

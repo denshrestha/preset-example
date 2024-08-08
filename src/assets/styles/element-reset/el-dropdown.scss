@@ -1,0 +1,52 @@
+@forward 'element-plus/theme-chalk/src/dropdown.scss' with (
+  $dropdown-item-padding: (
+    'default': 0 20px,
+  ),
+  $dropdown-item-line-height: (
+    'default': 1
+  )
+);
+
+.el-dropdown__popper {
+  @apply overflow-hidden;
+}
+
+.el-dropdown-menu {
+  @apply p-0;
+
+  &__item {
+    @apply font-600 rounded-card items-center h-12 relative transition-colors duration-100;
+
+    &--divided {
+      &:not(:first-child) {
+        @apply border-grey-light my-0 mx-5 rounded-[2px];
+      }
+
+      &:first-child {
+        @apply hidden;
+      }
+    }
+
+    &:before {
+      @apply content-[''] block absolute left-0 rounded-r-[2px] opacity-0 transition-opacity duration-100;
+      @apply w-[2px] h-4 top-1/2 transform -translate-y-1/2 bg-success;
+    }
+
+    &:hover {
+      &:before {
+        @apply opacity-100;
+      }
+
+      i {
+        @apply text-success;
+      }
+    }
+
+    i {
+      @apply w-5 h-full mr-4 text-grey transition-colors duration-100;
+      svg {
+        @apply h-auto w-auto;
+      }
+    }
+  }
+}

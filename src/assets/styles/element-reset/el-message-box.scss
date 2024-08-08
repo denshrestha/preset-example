@@ -1,0 +1,9 @@
+@use "element-plus/theme-chalk/src/message-box";
+
+.el-message-box {
+  @apply pb-10 pt-3 px-16 shadow;
+
+  &__btns {
+    @apply pt-6;
+  }
+}

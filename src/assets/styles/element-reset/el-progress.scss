@@ -1,0 +1,14 @@
+@use "element-plus/theme-chalk/src/progress";
+
+.el-progress svg path {
+  &:first-child {
+    @apply stroke-grey-light stroke-[5px] #{!important};
+  }
+  &:last-child {
+    @apply stroke-[5px];
+  }
+}
+
+.el-progress--circle .el-progress__text .text-sm {
+  @apply -mt-1;
+}

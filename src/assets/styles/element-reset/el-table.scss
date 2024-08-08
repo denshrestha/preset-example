@@ -1,0 +1,19 @@
+@use "element-plus/theme-chalk/src/table";
+
+.el-table thead {
+  @apply text-black;
+}
+
+.tracker {
+  .el-table__cell {
+    @apply py-3 border-grey-extra-light #{!important};
+  }
+  
+  .el-table td.el-table__cell .cell  {
+      @apply break-normal;
+  }
+
+  .el-table__inner-wrapper::before {
+    @apply hidden;
+  }
+}

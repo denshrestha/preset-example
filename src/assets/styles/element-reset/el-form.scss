@@ -1,0 +1,40 @@
+@use "element-plus/theme-chalk/src/form";
+
+.el-form {
+  .el-form-item {
+    &__label {
+      @apply text-xs mb-1 #{!important};
+      @apply font-500 transition-colors duration-200;
+    }
+
+    &__error {
+      @apply font-500;
+    }
+
+    &.is-error {
+      .el-form-item__label {
+        @apply text-danger;
+      }
+    }
+
+    &:not(.is-error) {
+      .el-form-item__label {
+        @apply text-primary;
+      }
+    }
+
+    &[disabled] {
+      .el-form-item__label {
+        @apply text-grey #{!important};
+      }
+    }
+  }
+
+  &--label-600 .el-form-item__label {
+    @apply font-600 #{!important};
+  }
+
+  &--label-sm .el-form-item__label {
+    @apply text-sm #{!important};
+  }
+}

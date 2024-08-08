@@ -1,0 +1,24 @@
+@use "element-plus/theme-chalk/src/input";
+
+.el-input {
+  @apply h-10 leading-none font-500 transition-shadow;
+
+  &:hover:not(.is-disabled) {
+    @apply shadow-input-hover;
+  }
+
+  &__wrapper {
+    @apply px-4 py-0;
+  }
+
+  &__inner {
+    @apply h-full;
+  }
+}
+
+.el-textarea {
+  &__inner {
+    @apply font-500;
+  }
+}
+

@@ -1,0 +1,7 @@
+@use "element-plus/theme-chalk/src/loading";
+
+.el-loading-mask {
+  .el-loading-spinner .path {
+    @apply stroke-white;
+  }
+}

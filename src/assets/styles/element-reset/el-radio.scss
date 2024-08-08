@@ -1,0 +1,32 @@
+@use "element-plus/theme-chalk/src/radio";
+
+.el-radio {
+  $parent: &;
+  @apply mr-0 h-auto leading-none inline-flex items-center;
+
+  &--vertical {
+    @apply flex-col gap-4;
+  }
+
+  &__inner {
+    @apply transition-colors duration-200;
+  }
+
+  &.is-checked {
+    #{$parent}__inner {
+      &:after {
+        @apply w-2.5 h-2.5;
+      }
+    }
+
+    &:not(.is-disabled) {
+      #{$parent}__inner {
+        @apply bg-white;
+
+        &:after {
+          @apply bg-primary-light;
+        }
+      }
+    }
+  }
+}

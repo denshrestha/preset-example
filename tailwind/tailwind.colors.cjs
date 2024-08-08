@@ -1,0 +1,20 @@
+module.exports = {
+  current: 'currentColor',
+  transparent: 'transparent',
+  white: '#ffffff',
+  black: '#1C1D1F',
+  primary: '#024242',
+  'primary-light': '#437E60',
+  success: '#A5CF4C',
+  warning: '#D99F59',
+  danger: '#DC5973',
+  blue: '#4495D1',
+  grey: '#889EA6',
+  'green-light': '#EDF5DB',
+  'grey-light': '#DCDDDE',
+  'grey-extra-light': '#F5F5F5',
+  'white-smoke': '#FCFCFC',
+  'yellow-sand': '#FFF3E0',
+  'middle-grey': '#889EA6',
+  'dark-grey': '#8D8D8D'
+}

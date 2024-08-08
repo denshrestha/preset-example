@@ -1,0 +1,94 @@
+.button {
+  $parent: &;
+  @apply rounded-md text-sm font-700 transition-all inline-flex items-center justify-center px-2;
+  @apply leading-normal overflow-hidden relative outline-none focus:outline-none;
+
+  svg {
+    @apply transition-colors;
+  }
+
+  /* PRIMARY */
+  &--primary:not(:disabled) {
+    @apply bg-success text-white;
+
+    &:hover:not(#{$parent}--loading) {
+      @apply shadow-primary-hover;
+    }
+
+    &:active:not(#{$parent}--loading) {
+      @apply rounded-lg;
+      @apply shadow-primary-pressed;
+    }
+  }
+
+  /* SECONDARY */
+  &--secondary:not(:disabled) {
+    @apply bg-white border border-primary text-black;
+
+    svg {
+      @apply text-grey;
+    }
+
+    &:hover:not(#{$parent}--loading) {
+      @apply shadow-secondary-hover;
+    }
+
+    &:active:not(#{$parent}--loading) {
+      @apply bg-primary text-white;
+
+      svg {
+        @apply text-white;
+      }
+    }
+  }
+
+  /* WARNING */
+  &--warning:not(:disabled) {
+    @apply bg-danger text-white; 
+
+    &:hover:not(#{$parent}--loading) {
+      @apply shadow-secondary-hover; 
+    }
+
+    &:active:not(#{$parent}--loading) {
+      @apply rounded-lg;
+      @apply shadow-primary-pressed; 
+    }
+  }
+
+  /* LINK */
+  &--link {
+    @apply underline px-0 cursor-pointer;
+
+    &:not(:disabled) {
+      @apply text-primary-light;
+
+      &:hover {
+        @apply text-primary;
+      }
+    }
+  }
+
+  &:disabled {
+    @apply cursor-not-allowed text-grey;
+
+    &:not(#{$parent}--link) {
+      @apply bg-grey-light border-grey-light;
+    }
+  }
+
+  &--loading {
+    @apply cursor-not-allowed;
+    .el-loading-spinner {
+      @apply transform scale-[0.8];
+    }
+  }
+
+  &--large:not(#{$parent}--link) {
+    @apply py-2.5;
+  }
+
+  &--default:not(#{$parent}--link) {
+    @apply py-1;
+  }
+}

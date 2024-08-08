@@ -1,0 +1,13 @@
+@use "element-plus/theme-chalk/src/checkbox";
+
+.el-checkbox {
+  @apply mr-0;
+
+  &__label {
+    @apply truncate leading-normal;
+  }
+
+  .el-checkbox__input .el-checkbox__inner:after {
+    @apply w-[5px] h-[11px] top-[1px] left-[6px];
+  }
+}

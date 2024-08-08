@@ -1,0 +1,15 @@
+html {
+  font-size: 16px;
+  line-height: normal;
+  @apply font-main text-black;
+}
+
+body {
+  @apply text-base bg-grey-extra-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg {
+  display: initial;
+}

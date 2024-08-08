@@ -1,0 +1,150 @@
+@use "../colors";
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': colors.$primary,
+    ),
+    'success': (
+      'base': colors.$success,
+    ),
+    'warning': (
+      'base': colors.$warning,
+    ),
+    'danger': (
+      'base': colors.$danger,
+    ),
+    'error': (
+      'base': colors.$danger,
+    ),
+    'info': (
+      'base': colors.$grey-extra-light
+    )
+  ),
+  $border-color: (
+    '': colors.$grey-light,
+    'light': colors.$grey-light,
+    'lighter': colors.$grey-light,
+    'extra-light': colors.$grey-light,
+    'dark': colors.$grey-light,
+    'darker': colors.$grey-light,
+  ),
+
+  $text-color:   (
+    'primary': colors.$black,
+    'regular': colors.$black,
+    'secondary': colors.$grey,
+    'placeholder': colors.$grey,
+    'disabled': colors.$grey,
+  ),
+
+  $border-radius: (
+    'base': 6px
+  ),
+
+  $popper: (
+    'border-radius': 10px
+  ),
+
+  $input: (
+    'border-color': colors.$grey-light,
+    'hover-border-color': colors.$grey
+  ),
+  $input-disabled:   (
+    'fill': colors.$grey-light,
+    'border': colors.$grey-light
+  ),
+
+  $checkbox: (
+    'input-height': '20px',
+    'input-width': '20px',
+    'border-radius': '4px',
+    'input-border-color-hover': colors.$grey,
+    'checked-bg-color': colors.$primary-light,
+    'checked-input-border-color': colors.$primary-light,
+    'text-color': colors.$black
+  ),
+
+  $radio: (
+    'input-height': '20px',
+    'input-width': '20px',
+    'input-border-color': colors.$primary-light,
+    'input-border-color-hover': colors.$grey,
+    'input-bg-color': colors.$white,
+    'text-color': colors.$black
+  ),
+
+  $radio-checked: (
+    'input-border-color': colors.$primary-light,
+    'icon-color': colors.$primary-light
+  ),
+
+  $radio-disabled: (
+    'input-border-color': colors.$grey-light,
+    'checked-input-border-color': colors.$grey,
+    'checked-icon-color': colors.$grey
+  ),
+
+  $dropdown: (
+    'menuItem-hover-fill': colors.$primary,
+    'menuItem-hover-color': colors.$grey-light,
+  ),
+
+  $mask-color: (
+    '': rgba(2, 66, 66, 0.4),
+    'extra-light': rgba(2, 66, 66, 0.4),
+  ),
+
+  $overlay-color: (
+    '': rgba(2, 66, 66, 0.7),
+    'light': rgba(2, 66, 66, 0.6),
+    'lighter': rgba(2, 66, 66, 0.5),
+  ),
+
+  $dialog: (
+    'border-radius': 10px,
+  ),
+
+  $messagebox: (
+    'width': 'fit-content',
+    'border-radius': '10px'
+  ),
+
+  $collapse: (
+    'border-color': colors.$white
+  ),
+
+  $slider: (
+    'button-size': 20px,
+    'button-wrapper-size': 20px,
+    'button-wrapper-offset': -7px
+  )
+);
+
+
+@use "element-plus/theme-chalk/src/base";
+@use "element-plus/theme-chalk/src/popper";
+@use "element-plus/theme-chalk/src/scrollbar";
+@use "element-plus/theme-chalk/src/overlay";
+@use "element-plus/theme-chalk/src/message";
+@use "element-plus/theme-chalk/src/upload";
+@use "element-plus/theme-chalk/src/popover";
+@use "element-plus/theme-chalk/src/slider";
+@use "element-plus/theme-chalk/src/alert";
+@use "element-plus/theme-chalk/src/input-number";
+@use "element-plus/theme-chalk/src/tabs";
+@use "element-plus/theme-chalk/src/tooltip";
+
+@use "./el-input";
+@use "./el-loading";
+@use "./el-form";
+@use "./el-select";
+@use "./el-checkbox";
+@use "./el-radio";
+@use "./el-dropdown";
+@use "./el-dialog";
+@use "./el-message-box";
+@use "./el-progress";
+@use "./el-collapse";
+@use "./el-input-number";
+@use "./el-table";

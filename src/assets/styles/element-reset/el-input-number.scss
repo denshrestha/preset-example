@@ -1,0 +1,19 @@
+@use "element-plus/theme-chalk/src/input-number";
+
+.custom-number-input {
+  .el-input {
+    @apply h-7;
+  }
+}
+
+  .el-input-number--small {
+    @apply w-24;
+  }
+
+  .el-input-number__increase {
+    @apply rounded-r-[5px];
+  }
+
+  .el-input-number__decrease {
+    @apply rounded-l-[5px];
+  }
